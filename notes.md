@@ -5,3 +5,4 @@
 3. By using {} we can insert dynamic values, Simply we can write JavaScript logics.
 
 4. fragment - fragment is a special component that can be used to group multiple elements without adding extra nodes to the DOM.
+
