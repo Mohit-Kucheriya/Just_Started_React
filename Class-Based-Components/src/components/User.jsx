@@ -3,10 +3,10 @@ import { useState } from "react"
 const User = (props) => {
     const [count] = useState(0)
 
-    const {title} = props
+    // const {title} = props
     return (
         <div className="user-card">
-            <h3>{title}</h3>
+            {/* <h3>{title}</h3> */}
             <p>Count: {count}</p>
             <p>Name: Mohit Kucheriya</p>
             <p>Emali: kuche@gmail.com</p>
