@@ -3,6 +3,7 @@ import Card from "./components/Card";
 import Song from "./components/Song";
 import StateBasics from "./components/StateBasics";
 import StateBasics1 from "./components/StateBasics1";
+import Slide from "./components/Slide";
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       {/* <Card /> */}
       {/* <Song /> */}
       {/* <StateBasics /> */}
-      <StateBasics1 />
+      {/* <StateBasics1 /> */}
+      <Slide />
     </div>
   );
 }
