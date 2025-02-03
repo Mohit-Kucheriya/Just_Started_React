@@ -6,7 +6,7 @@ function Slide() {
 
   return (
     <div className="flex h-screen w-full items-center justify-center bg-gray-100">
-      <div className="relative flex h-40 w-72 overflow-hidden rounded-lg ">
+      <div className="relative flex h-40 w-72 overflow-hidden rounded-lg">
         <img
           className={`h-full w-full shrink-0 object-cover transition-transform duration-700 ${val === false ? "-trasnslate-x-[0%]" : "-translate-x-[100%]"}`}
           src="https://wallpaper.forfun.com/fetch/a4/a4f69334204be4e0bd4efc6403cd562f.jpeg"
