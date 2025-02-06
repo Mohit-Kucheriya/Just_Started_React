@@ -17,6 +17,7 @@ function App() {
       addedToFavourite: false,
     },
     { songName: "Fell For You", artistName: "Shubh", addedToFavourite: false },
+    { songName: "Bandana", artistName: "Shubh", addedToFavourite: false },
   ];
 
   const [songData, setSongData] = useState(data);
