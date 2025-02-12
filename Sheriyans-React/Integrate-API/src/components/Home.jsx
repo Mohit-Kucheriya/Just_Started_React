@@ -8,7 +8,11 @@ function Home() {
     };
   });
 
-  return <div className="min-h-screen w-full bg-slate-300 p-4">Home</div>;
+  return (
+    <div className="min-h-screen w-full bg-slate-300 p-4">
+      <h1 className="text-3xl font-bold">Home</h1>
+    </div>
+  );
 }
 
 export default Home;
