@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State in React</title>
+</head>
+
+<body>
+    <input id="num1" type="text" placeholder="Enter Num1" /> +
+    <input id="num2" type="text" placeholder="Enter Num2" />
+
+    <button id="addBtn" onclick="add()">Add</button>
+
+    <div>Sum = <span id="sum"></span></div>
+
+    <script>
+        function useState(value) {
+            let val = { state: value };
+
+            function setVal(newVal) {
+                val.state = newVal;
+                document.getElementById("sum").innerText = newVal;
+            }
+            return { val, setVal };
+        }
+
+        const { val, setVal } = useState(0);
+
+        function add() {
+            const num1 = document.getElementById("num1").value;
+            const num2 = document.getElementById("num2").value;
+            let result = Number(num1) + Number(num2);
+
+            setVal(result);
+        }
+    </script>
+</body>
+
+</html>
