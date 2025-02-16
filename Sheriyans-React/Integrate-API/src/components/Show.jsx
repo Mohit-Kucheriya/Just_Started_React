@@ -1,16 +1,23 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useState, useEffect } from "react";
+import axios from "../utils/Axios"
 
 function Show() {
   const [products, setProducts] = useState([]);
 
   const getData = () => {
-    const API_URL = "https://fakestoreapi.com/products";
+    // const API_URL = "https://fakestoreapi.com/products";
+    
     axios
-      .get(API_URL)
+      .get("/products")
       .then((res) => setProducts(res.data))
       .catch((err) => console.log(err));
   };
+
+  useEffect(() => {
+    getData();
+
+    return () => {};
+  }, []);
 
   return (
     <div className="font-Poppins min-h-screen w-full bg-slate-300 p-4">
