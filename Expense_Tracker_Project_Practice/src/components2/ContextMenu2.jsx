@@ -1,12 +1,24 @@
-import React from 'react'
+import React from "react";
 
-const ContextMenu2 = () => {
+const ContextMenu2 = ({ contextMenuPosition, setContextMenuPosition, setExpenseData, rowId }) => {
+    if (!contextMenuPosition.left) return;
+    console.log(contextMenuPosition)
     return (
-        <div className="context-menu">
-            <div>Edit</div>
-            <div>Delete</div>
-        </div>
-    )
-}
+        <div className="context-menu" style={contextMenuPosition}>
 
-export default ContextMenu2
+            <div
+                onClick={() => {
+                    setContextMenuPosition({})
+                }}
+            >
+                Edit
+            </div>
+            <div onClick={() => {
+                setExpenseData((prevExpenseData) => prevExpenseData.filter((expense) => expense.id !== rowId));
+                setContextMenuPosition({})
+            }}>Delete</div>
+        </div>
+    );
+};
+
+export default ContextMenu2;
