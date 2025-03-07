@@ -30,27 +30,43 @@ function App() {
 export default App;
 */
 
-import React, { useState } from 'react'
+import React, { useState } from "react";
 import ExpenseForm2 from "./components2/ExpenseForm2";
 import ExpenseTable2 from "./components2/ExpenseTable2";
 import expenseData2 from "./expenseData2";
 
 const App = () => {
+  const [allExpense, setAllExpense] = useState({
+    title: "",
+    category: "",
+    amount: "",
+  });
 
-  const [expenseData, setExpenseData] = useState(expenseData2)
+  const [expenseData, setExpenseData] = useState(expenseData2);
+
+  const [editRowId, setEditRowId] = useState("")
 
   return (
     <main>
       <h1>Track Your Expense</h1>
 
       <div className="expense-tracker">
-
-        <ExpenseForm2 setExpenseData={setExpenseData}/>
-        <ExpenseTable2 expenseData={expenseData} setExpenseData={setExpenseData}/>
-
+        <ExpenseForm2
+          setExpenseData={setExpenseData}
+          allExpense={allExpense}
+          setAllExpense={setAllExpense}
+          editRowId={editRowId}
+          setEditRowId={setEditRowId}
+        />
+        <ExpenseTable2
+          expenseData={expenseData}
+          setExpenseData={setExpenseData}
+          setAllExpense={setAllExpense}
+          setEditRowId={setEditRowId}
+        />
       </div>
     </main>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -107,7 +107,7 @@ h1 {
 }
 
 .amount-column span {
-  margin-right: 6px;
+  margin-right: 1rem;
 }
 
 .arrow {
@@ -131,8 +131,14 @@ h1 {
   transform: translateY(2px);
 }
 
+.clear-sort{
+  cursor: pointer;
+  color: var(--btn-text-color);
+  background-color: var(--btn-bg-color);
+}
+
 .expense-table th {
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
