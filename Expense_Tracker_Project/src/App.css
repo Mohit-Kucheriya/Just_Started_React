@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Parkinsans:wght@300..800&display=swap");
+
+
+body {
+  font-family: "Parkinsans", sans-serif;
+  margin: 0 32px;
+}
+
+:root {
+  --btn-bg-color: #212529;
+  --btn-text-color: #f8f9fa;
+  --error-message-color: #c92a2a;
+}
+
+main {
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.expense-tracker {
+  position: relative;
+  display: flex;
+  gap: 2rem;
+}
+
+.expense-form {
+  width: 100%;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.input-container label {
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  font-weight: 500;
+}
+
+.input-container input,
+.input-container select {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--btn-bg-color);
+  font-family: inherit;
+  outline: none;
+  font-size: 1rem;
+}
+
+.add-btn {
+  all: unset;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 8px;
+  background-color: var(--btn-bg-color);
+  color: var(--btn-text-color);
+  text-align: center;
+  padding: 0.5rem 0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: 1px solid var(--btn-bg-color);
+}
+
+.expense-table {
+  width: 100%;
+  border-collapse: collapse;
+  align-self: flex-start;
+}
+
+.expense-table select {
+  font: inherit;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.amount-column div {
+  display: flex;
+}
+
+.amount-column span {
+  margin-right: 6px;
+}
+
+.arrow {
+  transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.up-arrow {
+  margin-left: auto;
+}
+
+.up-arrow:active {
+  transform: translateY(-2px);
+}
+
+.down-arrow {
+  margin-left: 6px;
+}
+
+.down-arrow:active {
+  transform: translateY(2px);
+}
+
+.expense-table th {
+  font-size: 1.15rem;
+  font-weight: 500;
+}
+
+.expense-table td {
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.expense-table th,
+.expense-table td {
+  border: 1px solid var(--btn-bg-color);
+  text-align: left;
+  padding: 0.5rem;
+  text-transform: capitalize;
+}
+
+.context-menu {
+  position: absolute;
+  background-color: var(--btn-text-color);
+  display: none;
+  border-radius: 0.3rem;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.context-menu div {
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.context-menu div:hover {
+  background-color: #e9ecef;
+}
+
+.error-message {
+  position: absolute;
+  margin-block: 0.2rem;
+  top: 100%;
+  font-size: 0.8rem;
+  color: var(--error-message-color);
+}
+
+@media (max-width: 900px) {
+  body {
+    margin-inline: 16px;
+  }
+
+  .expense-tracker {
+    flex-direction: column;
+  }
+}
